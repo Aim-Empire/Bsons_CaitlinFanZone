@@ -170,3 +170,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// --- Fix: stop gallery & fan-photo cards from acting like full-page links ---
+document.addEventListener('DOMContentLoaded', function () {
+  const problematicCards = document.querySelectorAll(
+    '.gallery-card, .fan-photo-card'
+  );
+
+  problematicCards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      // Allow clicks on actual links or buttons inside the card
+      if (e.target.closest('a, button')) {
+        return;
+      }
+      // Block the "hidden" link behaviour
+      e.preventDefault();
+    });
+  });
+});
