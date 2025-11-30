@@ -188,3 +188,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// --- Fix 2: stop gallery & fan-photo cards from auto-opening Instagram ---
+document.addEventListener('click', function (e) {
+  const anchor = e.target.closest('a');
+  if (!anchor) return;
+
+  // Only touch Instagram links
+  if (!anchor.href || !anchor.href.includes('instagram.com')) return;
+
+  // Only when the click is inside the gallery / fan-photo areas
+  const inProblemCard = e.target.closest(
+    '#gallery, .gallery-card, .fan-photo-card, .fan-photo-section'
+  );
+  if (!inProblemCard) return;
+
+  // Detect if user tapped the real Instagram icon image
+  const t = e.target;
+  const isIconImg =
+    t.tagName === 'IMG' &&
+    (
+      (t.alt && t.alt.toLowerCase().includes('instagram')) ||
+      (t.src && t.src.toLowerCase().includes('instagram'))
+    );
+
+  // If it's the icon itself, allow normal behaviour
+  if (isIconImg) return;
+
+  // Any other click (inputs, labels, empty card space) -> block navigation
+  e.preventDefault();
+  e.stopPropagation();
+});
