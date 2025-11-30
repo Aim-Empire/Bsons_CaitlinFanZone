@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ticket Bonus Request — Caitlin Clark Fan Zone</title>
+  <title>Community Support for Top Fans — Caitlin Clark Fan Zone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div class="top-banner">
-    <p>Ticket Bonus Requests — always free to submit. Never pay anyone to enter, all payment is handled, received and disbursed by our official team and you can contact them by mail ; <a href="mailto:caitlinclark@bsonsinc.com">caitlinclark@bsonsinc.com</a>, .</p>
+    <p>Community Support — small tokens or help for selected loyal fans when possible.</p>
   </div>
 
   <header class="site-header">
@@ -23,7 +23,6 @@
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav class="main-nav">
         <a href="index.html#home">Home</a>
-        <a href="index.html#schedule">Games & Tickets</a>
         <a href="index.html#fans">Fan Zone</a>
         <a href="index.html#bsons">Bsons Inc</a>
         <a href="index.html#contact">Contact</a>
@@ -34,13 +33,13 @@
   <section class="section">
     <div class="section-inner">
       <div class="card">
-        <h2>Ticket Bonus Request</h2>
+        <h2>Community Support for Top Fans</h2>
         <p>
-          Use this form to describe the tickets you want to buy. Bsons Inc may review and follow up with
-          small discounts, guidance, or support for selected fans. Submitting this form does not guarantee any bonus but you might qualify for a discounted ticket purchase.
+          This form helps Bsons Inc understand your situation and how you support Caitlin Clark.
+          Selected fans may receive small support tokens or future Verified Fan badges.
         </p>
-        <form name="ticket-bonus" method="post" data-netlify="true">
-          <input type="hidden" name="form-name" value="ticket-bonus">
+        <form name="community-support" method="post" data-netlify="true">
+          <input type="hidden" name="form-name" value="community-support">
           <label>Full Name
             <input type="text" name="name" required>
           </label>
@@ -53,29 +52,32 @@
           <label>Country &amp; City
             <input type="text" name="location">
           </label>
-          <label>Game &amp; Date you want to attend
-            <input type="text" name="game">
+          <label>How long have you followed Caitlin?
+            <input type="text" name="following_time">
           </label>
-          <label>Ticket details you want to buy
-            <textarea name="ticket_details" rows="3"></textarea>
-          </label>
-          <label>Where do you follow Caitlin most?
+          <label>Where do you support her most?
             <textarea name="support_places" rows="3"></textarea>
           </label>
-          <label>Your @usernames / profile links (for verification)
+          <label>Social platforms you follow her on
+            <input type="text" name="platforms" placeholder="Instagram, X, etc.">
+          </label>
+          <label>Your @usernames / profile links
             <textarea name="handles" rows="3"></textarea>
           </label>
-          <label>Anything else we should know?
-            <textarea name="extra" rows="3"></textarea>
+          <label>Why are you requesting support?
+            <textarea name="reason" rows="4"></textarea>
+          </label>
+          <label>What kind of support would help most?
+            <textarea name="support_type" rows="3"></textarea>
           </label>
           <p class="small-note">
-            We usually follow up first by email. For urgent things you can also ping the WhatsApp desk after submitting.
+            If your form is selected, we may respond either by email or WhatsApp depending on what you filled in.
           </p>
-          <button type="submit" class="btn primary">Submit Ticket Bonus Request</button>
+          <button type="submit" class="btn primary">Submit Community Support Form</button>
         </form>
 
         <div class="hero-buttons" style="margin-top:16px;">
-          <a href="https://wa.me/17077128071?text=Hi%20Bsons,%20I%20just%20submitted%20a%20ticket%20bonus%20request%20on%20the%20Caitlin%20Clark%20Fan%20Zone."
+          <a href="https://wa.me/17077128071?text=Hi%20Bsons,%20I%20just%20submitted%20the%20Community%20Support%20form%20on%20the%20Caitlin%20Clark%20Fan%20Zone."
              target="_blank"
              class="btn secondary">
             Notify Desk on WhatsApp
